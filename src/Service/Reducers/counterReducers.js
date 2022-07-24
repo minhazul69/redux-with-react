@@ -4,8 +4,9 @@ import {
   RESET_COUNTER,
 } from "../Constants/counterConstns";
 
-const initialState = { count: 0 };
-const counterReducer = (state = initialState, action) => {
+const initialCounterState = { count: 0 };
+
+const counterReducer = (state = initialCounterState, action) => {
   switch (action.type) {
     case INCREMENT_COUNTER:
       return {
@@ -26,5 +27,4 @@ const counterReducer = (state = initialState, action) => {
       return state;
   }
 };
-
 export default counterReducer;
